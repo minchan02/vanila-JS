@@ -8,10 +8,10 @@ const USERNAME_KEY = "username";
 function onLoginSubmit(event){
 	event.preventDefault(); // 화면 새로고침 막아주기 (기능 억제)
 	loginForm.classList.add(HIDDEN_CLASSNAME);
-	const username = loginInput.value;
-	localStorage.setItem(USERNAME_KEY, username);
+	const usernameThatTheUserWrote= loginInput.value;
+	localStorage.setItem(USERNAME_KEY, usernameThatTheUserWrote);
 	//greeting.innerText = "Hello " + username;
-	paintGreetings(username);
+	paintGreetings(usernameThatTheUserWrote);
 }
 
 function paintGreetings(username){
